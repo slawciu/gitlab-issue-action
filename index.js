@@ -14,9 +14,8 @@ const main = async () => {
     const ref = github.context.payload.ref;
     const issueId = ref.substring(ref.indexOf(`heads/`)+`heads/`.length, ref.indexOf('-'));
     
-    console.log(`The branch: ${ref}`);
-
-    await fetch(`https://${gitlabUrl}/${projectId}/issues/${issueId}?labels=${encodeURIComponent(label)}`, {
+    console.log(`https://${gitlabUrl}/api/v4/projects/${projectId}/issues/${issueId}?labels=${encodeURIComponent(label)}`)
+    await fetch(`https://${gitlabUrl}/api/v4/projects/${projectId}/issues/${issueId}?labels=${encodeURIComponent(label)}`, {
       method: 'PUT',
       headers: {
         "Private-Token": accessToken
