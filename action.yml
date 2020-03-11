@@ -1,0 +1,16 @@
+on: [pull_request]
+
+name: 'gitlab issue action'
+description: 'Moves linked gitlab issue to other column'
+inputs:
+  branch-name:
+    description: 'Branch name, should start with issue id'
+    required: true
+    default: '0'
+  label-to-apply:
+    description: 'Label to apply to related issue'
+    required: true
+    default: 'Code Review'
+runs:
+  using: 'node12'
+  main: 'index.js'
