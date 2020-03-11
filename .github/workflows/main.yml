@@ -5,10 +5,13 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to move a linked issue
     steps:
-    - name: Checkout
+      - name: Checkout
       uses: actions/checkout@v2
-    - name: Move linked issue
+      - name: Move linked issue
       id: move-issue
       uses: ./
       with:
-        branch-name: ${GITHUB_REF##*/}
+        gitlab-url: gitlab.com
+        label: Code Review
+        project-id: 17425167
+        access-token: siPUVfjxyQRd-nu2vJ_H
