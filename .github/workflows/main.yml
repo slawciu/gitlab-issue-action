@@ -6,12 +6,12 @@ jobs:
     name: A job to move a linked issue
     steps:
       - name: Checkout
-      uses: actions/checkout@v2
+        uses: actions/checkout@v2
       - name: Move linked issue
-      id: move-issue
-      uses: ./
-      with:
-        gitlab-url: gitlab.com
-        label: Code Review
-        project-id: 17425167
-        access-token: siPUVfjxyQRd-nu2vJ_H
+        id: move-issue
+        uses: ./
+        with:
+          gitlab-url: gitlab.com
+          label: Code Review
+          project-id: 17425167
+          access-token: siPUVfjxyQRd-nu2vJ_H
