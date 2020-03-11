@@ -14,4 +14,4 @@ jobs:
           gitlab-url: gitlab.com
           label-to-apply: Code Review
           project-id: 17425167
-          access-token: siPUVfjxyQRd-nu2vJ_H
+          access-token: accessToken
