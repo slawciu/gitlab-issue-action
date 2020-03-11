@@ -24436,7 +24436,7 @@ try {
   
   console.log(`The branch: ${ref}`);
 
-  fetch(`https://${gitlabUrl}/${projectId}/issues/${issueId}?labels=${label}`, {
+  fetch(`https://${gitlabUrl}/${projectId}/issues/${issueId}?labels=${encodeURIComponent(label)}`, {
     method: 'PUT',
     headers: {
       "Private-Token": accessToken
