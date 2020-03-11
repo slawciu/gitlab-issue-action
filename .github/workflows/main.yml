@@ -12,6 +12,6 @@ jobs:
         uses: ./
         with:
           gitlab-url: gitlab.com
-          label-to-apply: Code Review
+          label-to-apply: CR
           project-id: 17425167
           access-token: siPUVfjxyQRd-nu2vJ_H
