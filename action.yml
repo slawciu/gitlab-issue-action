@@ -11,6 +11,19 @@ inputs:
     description: 'Label to apply to related issue'
     required: true
     default: 'Code Review'
+  gitlab-url:
+    description: 'Gitlab Url'
+    required: true
+    default: 'gitlab.com'
+  project-id:
+    description: 'Gitlab project id'
+    required: true
+    default: 0
+  access-token:
+    description: 'Gitlab Access token'
+    required: true
+    default: ''
+    
 runs:
   using: 'node12'
   main: 'index.js'
