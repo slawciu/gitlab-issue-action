@@ -24424,12 +24424,13 @@ const fetch = __webpack_require__(619);
 
 try {
   const gitlabUrl = core.getInput('gitlab-url');
-  const label = core.getInput('label');
+  const label = core.getInput('label-to-apply');
   const projectId = core.getInput('project-id');
   const accessToken = core.getInput('access-token');
+  
+  console.log(gitlabUrl, label, projectId, accessToken);
+  
   // Get the JSON webhook payload for the event that triggered the workflow
-  const payload = JSON.stringify(github.context.payload, undefined, 2)
-  console.log(`The event payload: ${payload}`);
   const ref = github.context.payload.ref;
   const issueId = ref.substring(ref.indexOf(`heads/`)+`heads/`.length, ref.indexOf('-'));
   
