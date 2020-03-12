@@ -1,6 +1,7 @@
-# Hello world javascript action
+# Gitlab issue action
 
 This action moves related gitlab issue to provided column (sets the label) when PR is created.
+Branch name should start with issue number, so for issue 1337, there should be `1337-my-branch`
 
 ## Inputs
 ### `gitlab-url`
