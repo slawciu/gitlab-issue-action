@@ -2,8 +2,8 @@ on: [pull_request]
 
 name: 'gitlab issue action'
 description: 'Moves linked gitlab issue to other column'
-icon: 'check-square'
-color: 'blue'
+icon: check-square
+color: blue
 inputs:
   branch-name:
     description: 'Branch name, should start with issue id'
